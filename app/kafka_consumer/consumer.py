@@ -16,7 +16,7 @@ def consume_all_massages():
     )
     for message in consumer:
         print(message.value)
-        insert_many_descriptions(message.value)
+        # insert_many_descriptions(message.value)
 
 
 

@@ -7,9 +7,9 @@ def insert_many_descriptions(description:List[Dict]) -> None:
     create_index("events")
     try:
         for x in description:
-            x["new"] = False
+            x["new"] = True
             elastic_client.index(index="events", body=x)
-            print(x, "in elastic")
+        print(len(description), "in elastic")
     except Exception as e:
         print(e)
 
